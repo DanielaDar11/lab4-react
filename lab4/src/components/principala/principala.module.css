@@ -1,0 +1,60 @@
+.quizContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  margin-top: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.formGroup input,
+.formGroup select {
+  margin-top: 8px;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quizImageContainer {
+  text-align: center;
+}
+
+.quizImage {
+  width: 500px;
+  min-height: 300px;
+}
+
+.form button {
+  background-color: rgb(19, 191, 244);
+}
+
+.trimitere:hover {
+  background-color: rgb(6, 157, 195);
+}
+.intrebari {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.eroare {
+  color: red;
+}

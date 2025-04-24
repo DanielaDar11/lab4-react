@@ -1,0 +1,64 @@
+.quizContainer {
+  margin: auto;
+  margin-top: 40px;
+  width: 80%;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: rgb(6, 166, 171);
+}
+
+.intrebareFlexContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.intrebareFlexContainer img {
+  width: 350px;
+  margin: auto;
+
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.continutDreapta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 250px;
+}
+
+.intrebareText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.raspunsuriContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.raspunsLabel {
+  font-size: 16px;
+}
+
+.raspunsInput {
+  margin-right: 10px;
+}
+
+.timpLimitat {
+  font-size: 14px;
+  color: rgb(143, 0, 0);
+}
+.nextButton:hover {
+  background-color: #c7c7c7;
+  color: black;
+}
+.categorie {
+  color: rgb(143, 0, 0);
+  font-size: 18px;
+}

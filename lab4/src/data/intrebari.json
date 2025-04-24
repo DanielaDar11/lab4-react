@@ -1,0 +1,143 @@
+[
+   
+    {
+        "id": 1,
+        "intrebare": "Care este cel mai mare organ din corpul uman?",
+        "url":"src/assets/Foto/corp.png",
+        "raspunsuri": [
+            "a) Rinichii",
+            "b) Pielea",
+            "c) Mușchii",
+            "d) Intestinul subțire"
+        ],
+        "raspuns_corect": "b) Pielea",
+        "categorie": "Biologie",
+        "dificultate": "Ușor"
+    },
+    {
+        "id": 2,
+        "intrebare": "Care este cel mai mare ocean de pe Terra?",
+        "url":"src/assets/Foto/pamant.png",
+        "raspunsuri": [
+            "a) Oceanul Atlantic",
+            "b) Oceanul Indian",
+            "c) Oceanul Arctic",
+            "d) Oceanul Pacific"
+        ],
+        "raspuns_corect": "d) Oceanul Pacific",
+        "categorie": "Geografie",
+        "dificultate": "Ușor"
+    },
+    {
+        "id": 3,
+        "intrebare": "Care planetă este cea mai aproape de Soare?",
+        "url":"src/assets/Foto/sistems.png",
+        "raspunsuri": [
+            "a) Venus",
+            "b) Terra",
+            "c) Mercur",
+            "d) Marte"
+        ],
+        "raspuns_corect": "c) Mercur",
+        "categorie": "Astronomie",
+        "dificultate": "Ușor"
+    },
+    {
+        "id": 4,
+        "intrebare": "Cine a scris romanul 'Povara bunătății noastre'?",
+        "url":"src/assets/Foto/povara.png",
+        "raspunsuri": [
+            "a) Ion Druță",
+            "b) Marin Preda",
+            "c) George Coșbuc",
+            "d) Liviu Rebreanu"
+        ],
+        "raspuns_corect": "a) Ion Druță",
+        "categorie": "Literatură",
+        "dificultate": "Mediu"
+    },
+    {
+        "id": 5,
+        "intrebare": "Ce pigment din frunze captează lumina solară pentru fotosinteză?",
+        "url":"src/assets/Foto/frunza.png",
+        "raspunsuri": [
+            "a) Caroten",
+            "b) Antocianină",
+            "c) Clorofilă",
+            "d) Xantofilă"
+        ],
+        "raspuns_corect": "c) Clorofilă",
+        "categorie": "Biologie",
+        "dificultate": "Mediu"
+    },
+    {
+        "id": 6,
+        "intrebare": "Care este formula chimică a clorurii de sodiu (sarea de masă)?",
+        "url":"src/assets/Foto/sare.png",
+        "raspunsuri": [
+            "a) NaCl",
+            "b) KCl",
+            "c) CaCl2",
+            "d) MgCl2"
+        ],
+        "raspuns_corect": "a) NaCl",
+        "categorie": "Chimie",
+        "dificultate": "Mediu"
+    },
+    {
+        "id": 7,
+        "intrebare": "Care este principala particulă responsabilă pentru curentul electric într-un conductor?",
+        "url":"src/assets/Foto/curent.png",
+        "raspunsuri": [
+            "a) Protonii",
+            "b) Electronii",
+            "c) Neutronii",
+            "d) Nucleonii"
+        ],
+        "raspuns_corect": "b) Electronii",
+        "categorie": "Fizică",
+        "dificultate": "Mediu"
+    },
+    {
+        "id": 8,
+        "intrebare": "Ce țară este cunoscută pentru cel mai mare număr de vulcani activi?",
+        "url":"src/assets/Foto/vulcani.png",
+        "raspunsuri": [
+            "a) Japonia",
+            "b) Indonezia",
+            "c) Islanda",
+            "d) Filipine"
+        ],
+        "raspuns_corect": "b) Indonezia",
+        "categorie": "Geografie",
+        "dificultate": "Greu"
+    },
+    {
+        "id": 9,
+        "intrebare": "În ce an a fost semnat Tratatul de la Versailles, care a pus capăt Primului Război Mondial?",
+        "url":"src/assets/Foto/tratat.png",
+        "raspunsuri": [
+            "a) 1918",
+            "b) 1919",
+            "c) 1920",
+            "d) 1921"
+        ],
+        "raspuns_corect": "b) 1919",
+        "categorie": "Istorie",
+        "dificultate": "Greu"
+    },
+    {
+        "id": 10,
+        "intrebare": "Care numere sunt mai multe: numerele naturale de la 0 la +infinit sau numerele reale între 0 și 1?",
+        "url":"src/assets/Foto/numere.png",
+        "raspunsuri": [
+            "a) Sunt mai multe numere naturale de la 0 la +infinit",
+            "b) Ambele mulțimi au același număr de elemente",
+            "c) Este imposibil de comparat",
+            "d) Sunt mai multe numere reale între 0 și 1"
+        ],
+        "raspuns_corect": "d) Sunt mai multe numere reale între 0 și 1",
+        "categorie": "Matematică",
+        "dificultate": "Greu"
+    }
+]
