@@ -8,6 +8,7 @@ import React, {
 import lista from "../../data/intrebari.json";
 import styles from "./ListaIntrebari.module.css";
 import Rezultatele from "../Rezultatele/Rezultatele";
+import { salveazaInLocalStorage } from "../../functii/salveazaLocalStorage";
 
 const ListaIntrebari = React.memo(
   ({ nume, ordineaIntrebarilor, timpLimitat }) => {
@@ -30,28 +31,6 @@ const ListaIntrebari = React.memo(
     const intrebareCurenta = useMemo(() => {
       return intrebariProcesate[indexCurent];
     }, [intrebariProcesate, indexCurent]);
-
-    const salveazaInLocalStorage = useCallback((nume, scor, rezultate) => {
-      const scoruriSalvate = JSON.parse(
-        localStorage.getItem("scoruriQuiz") || "[]"
-      );
-      let existaDeja = false;
-      for (let i = 0; i < scoruriSalvate.length; i++) {
-        if (
-          scoruriSalvate[i].nume === nume &&
-          JSON.stringify(scoruriSalvate[i].rezultate) ===
-            JSON.stringify(rezultate)
-        ) {
-          existaDeja = true;
-          break;
-        }
-      }
-
-      if (!existaDeja) {
-        scoruriSalvate.push({ nume, scor, rezultate });
-        localStorage.setItem("scoruriQuiz", JSON.stringify(scoruriSalvate));
-      }
-    }, []);
 
     const verificaRaspuns = useCallback(() => {
       if (blocat || !intrebariProcesate.length) return;
@@ -95,7 +74,6 @@ const ListaIntrebari = React.memo(
       timpLimitat,
       nume,
       blocat,
-      salveazaInLocalStorage,
       intrebareCurenta,
       intrebariProcesate,
     ]);

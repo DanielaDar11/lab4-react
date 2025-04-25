@@ -1,30 +1,26 @@
-import React from "react";
-import { useState } from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
 import styles from "./Tema.module.css";
 import Logo from "../../assets/Logo.png";
 import Principala from "../principala/Principala";
 
 function Tema() {
-  const [tema, setTema] = useState("light");
-
-  function setareTema() {
-    setTema(tema === "light" ? "dark" : "light");
-  }
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div
       className={`${styles.container} ${
-        tema === "light" ? styles.containerLight : styles.containerDark
+        theme === "light" ? styles.containerLight : styles.containerDark
       }`}
     >
       <div
         className={`${styles.content} ${
-          tema === "light" ? styles.Light : styles.Dark
+          theme === "light" ? styles.Light : styles.Dark
         }`}
       >
         <img src={Logo} alt="Logo" />
-        <button className={styles.tematica} onClick={setareTema}>
-          {tema === "light" ? "Dark mode" : "Light mode"}
+        <button className={styles.tematica} onClick={toggleTheme}>
+          {theme === "light" ? "Dark mode" : "Light mode"}
         </button>
       </div>
       <Principala />

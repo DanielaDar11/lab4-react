@@ -1,26 +1,31 @@
 import React, { useState } from "react";
 import styles from "./Rezultatele.module.css";
-
+import { stergeScorurileSalvate } from "../../functii/salveazaLocalStorage";
 function Rezultatele({ nume, scor, totalIntrebari, rezultate }) {
-  const scoruriSalvate = JSON.parse(
-    localStorage.getItem("scoruriQuiz") || "[]"
-  ).sort((a, b) => b.scor - a.scor);
-
   const [detaliiVizibile, setDetaliiVizibile] = useState({});
+  const toateScorurile = JSON.parse(
+    localStorage.getItem("scoruriQuiz") || "[]"
+  );
+
+  const scoruriSalvate = {};
+
+  toateScorurile.forEach((s) => {
+    if (!scoruriSalvate[s.nume] || s.scor > scoruriSalvate[s.nume].scor) {
+      scoruriSalvate[s.nume] = s;
+    }
+  });
+
+  const scoruri = Object.values(scoruriSalvate).sort((a, b) => b.scor - a.scor);
 
   const incepeDinNou = () => {
     window.location.href = "/";
   };
 
-  const Detalii = (index) => {
+  const detalii = (index) => {
     setDetaliiVizibile((prevState) => ({
       ...prevState,
       [index]: prevState[index] ? null : true,
     }));
-  };
-  const stergeScorurile = () => {
-    localStorage.removeItem("scoruriQuiz");
-    window.location.reload();
   };
 
   return (
@@ -47,12 +52,12 @@ function Rezultatele({ nume, scor, totalIntrebari, rezultate }) {
 
       <h3>Clasament utilizatori:</h3>
       <ul className={styles.clasamentLista}>
-        {scoruriSalvate.map((s, i) => (
+        {scoruri.map((s, i) => (
           <li key={i} className={styles.clasamentItem}>
             <h2>
               {s.nume} - {s.scor} puncte
             </h2>
-            <button onClick={() => Detalii(i)} className={styles.detaliiButon}>
+            <button onClick={() => detalii(i)} className={styles.detaliiButon}>
               Detalii
             </button>
             {detaliiVizibile[i] && (
@@ -82,7 +87,7 @@ function Rezultatele({ nume, scor, totalIntrebari, rezultate }) {
         Începe din nou quizul
       </button>
 
-      <button onClick={stergeScorurile} className={styles.stergeScoruri}>
+      <button onClick={stergeScorurileSalvate} className={styles.stergeScoruri}>
         Șterge scorurile salvate
       </button>
     </div>
